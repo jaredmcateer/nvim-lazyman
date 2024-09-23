@@ -14,7 +14,7 @@
 # export BROWSER="w3m"
 #
 # Bob neovim version manager path
-[ -d ${HOME}/.local/share/bob/nvim-bin ] && {
+[[ -d ${HOME}/.local/share/bob/nvim-bin && ":$PATH:" != *:${HOME}/.local/share/bob/nvim-bin:* ]] && {
   export PATH="${HOME}/.local/share/bob/nvim-bin${PATH:+:${PATH}}"
 }
 # Aliases for lsd, tldr, and bat if they exist
